@@ -1,0 +1,15 @@
+\ Model Aircraft_Landing_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ separation_0_8: - t[0] + t[8] >= 15
+ separation_1_5: - t[1] + t[5] >= 15
+ separation_5_0: t[0] - t[5] >= 15
+ separation_8_1: t[1] - t[8] >= 15
+Bounds
+ t[0] free
+ t[1] free
+ t[5] free
+ t[8] free
+End
